@@ -14,7 +14,7 @@ public class ReturnedSandBox {
         String chopMe = "The atomic number of zinc is 30";
         String output = chopCharactersFromString(chopMe);
         int len = chopMe.length();
-        System.out.println("Test chopped is: " + coutput);
+        System.out.println("Test chopped is: " + output);
     }
     public static String chopCharactersFromString(String strToChop){
         String chopped;
@@ -23,7 +23,7 @@ public class ReturnedSandBox {
             return "Hark! Too Short!";
         }
         
-        chopped = strToChop.substring(2, inputStringLenght);
+        chopped = strToChop.substring(2, inputStringLength);
         return chopped;
     }
 }
