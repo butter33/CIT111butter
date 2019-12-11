@@ -6,6 +6,8 @@
 package loopingpractice;
 
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author michael.butter
@@ -29,8 +31,13 @@ public class ForLoopIntro {
         for(int numLoops = 0; numLoops <= loopControl; numLoops = numLoops +1){
             // same contents of our loop body
             System.out.println("The value of numLoops: " + numLoops);
-            //but the for() loop helps us by incrementingf numLoops in its
-            // own declaratiom
+            try {
+                //but the for() loop helps us by incrementingf numLoops in its
+                // own declaratiom
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ForLoopIntro.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } // close for loop
     }// close main method
 } // close class
